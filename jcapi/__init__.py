@@ -2,10 +2,12 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_bcrypt import Bcrypt
+from flask_jwt_extended import JWTManager
 
 db = SQLAlchemy()
 migrate = Migrate()
 bcrypt = Bcrypt()
+jwt = JWTManager()
 
 
 def create_app(config_filename=None):
@@ -20,14 +22,17 @@ def initialize_extensions(app):
     db.init_app(app)
     migrate.init_app(app, db)
     bcrypt.init_app(app)
+    jwt.init_app(app)
 
 
 def register_blueprints(app):
     from jcapi.blueprints import home as home_blueprint
+    from jcapi.blueprints.login import login as login_blueprint
     from jcapi.blueprints.registration import registration as registration_blueprint
 
     app.register_blueprint(home_blueprint)
     app.register_blueprint(registration_blueprint, url_prefix='/registration')
+    app.register_blueprint(login_blueprint, url_prefix='/login')
 
 
 from jcapi.models import User # noqa

@@ -1,5 +1,6 @@
 import pytest
 from jcapi import create_app, db
+from jcapi.models import User
 
 
 @pytest.fixture(scope='module')
@@ -19,3 +20,11 @@ def test_client(app):
     ctx.push()
     yield testing_client  # this is where the testing happens!
     ctx.pop()
+
+
+@pytest.fixture(scope='module')
+def user(app):
+    user = User('deezent', 'deezent@gmail.com', 'deezentpass')
+    db.session.add(user)
+    db.session.commit()
+    yield user

@@ -21,6 +21,8 @@ def register():
         u = User(username, email, password)
         db.session.add(u)
         db.session.commit()
+    else:
+        return jsonify(dict(error='User already registered')), 409
     return jsonify({}), 204
 
 
