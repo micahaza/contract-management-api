@@ -1,6 +1,7 @@
 import pytest
 from jcapi import create_app, db
 from jcapi.models import User
+from flask_jwt_extended import create_access_token
 
 
 @pytest.fixture(scope='module')
@@ -28,3 +29,12 @@ def user(app):
     db.session.add(user)
     db.session.commit()
     yield user
+
+
+@pytest.fixture(scope='module')
+def header_with_token(user):
+    access_token = create_access_token(user.username)
+    headers = {
+        'Authorization': 'Bearer {}'.format(access_token)
+    }
+    yield headers
