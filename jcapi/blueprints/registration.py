@@ -1,4 +1,4 @@
-from flask import Blueprint, request, render_template, redirect, url_for
+from flask import Blueprint, request, render_template, jsonify
 from jcapi.models import User
 from jcapi import db
 
@@ -19,4 +19,4 @@ def register():
             u = User(username, email, password)
             db.session.add(u)
             db.session.commit()
-        return redirect(url_for('registration.register'))
+        return jsonify({}), 204

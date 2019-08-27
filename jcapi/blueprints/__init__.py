@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, jsonify
 
 
 home = Blueprint('home', __name__)
@@ -6,4 +6,4 @@ home = Blueprint('home', __name__)
 
 @home.route('/')
 def default():
-    return 'home'
+    return jsonify({}), 200
