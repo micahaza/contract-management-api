@@ -38,3 +38,10 @@ def header_with_token(user):
         'Authorization': 'Bearer {}'.format(access_token)
     }
     yield headers
+
+
+@pytest.fixture(scope='module')
+def contract_text():
+    with open('./tests/nda-contract.txt') as file:
+        data = file.readlines()
+    return data[0]

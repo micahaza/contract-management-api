@@ -1,0 +1,189 @@
+Discloser and the Recipient are each referred to as a “Party” and collectively as “Parties”.
+
+RECITALS
+
+(A) The Discloser and the Recipient are engaging in discussions about a possible agreement between them (the "Agreement"). In connection herewith each Party has disclosed or may further disclose its Confidential Information to the other Party. This NDA is intended to allow the Parties to continue to pursue the discussions while protection each Party's Confidential Information (including Confidential Information previously disclosed to the other party) against unauthorized use or disclosure.
+
+WHEREBY IT IS AGREED as follows:
+
+1. DEFINITIONS AND INTERPRETATION
+
+1.1 The definitions and rules of interpretation in this clause shall apply in this NDA.
+
+"Confidential Information" means all confidential, proprietary or non-public information (however recorded or preserved) that is disclosed or made available (in any form or by any method) by a Party to the other Party (or any of its Representatives) whether before or after the date of this NDA, in connection with the Agreement, including:
+
+(a) the fact that discussions or negotiations are taking place concerning the Agreement and the content and status of such discus¬sions or negotiations;
+
+(b) the existence of this NDA and its terms;
+
+(c) all confidential or proprietary information relating to the business or affairs, financial or trading position, assets, intellectual property rights, customers, clients, suppliers, employees, plans, operations, processes, products, intentions or market opportunities of any of the Parties or any member of their Group, including but not limited to:
+
+(i) Software in any form (which's use must always comply with the applicable software's user license and/or general terms as applicable)
+
+(ii) Financial information, plans, costings, prices and accounts;
+
+(iii) Trade secrets;
+
+(iv) Confidential know-how;
+
+(v) Marketing information and plans;
+
+(vi) Processes, equipment and techniques used in the Business;
+
+(vii) Designs for products and manufacturing;
+
+(viii) Intellectual and industrial property; or
+
+(d) any other information that may reasonably be considered as confidential, whether or not such information is designated as confidential or of a proprietary nature.
+
+References to Confidential Information shall include any Copies;
+
+"Copies" means copies or reproductions of Confidential Information in any form or medium including any document, electronic file, note, extract, analysis, study, plan, compilation or any other way of representing or recording and recalling information which contains, reflects or is derived or generated from Confidential Information (or any part of it);
+
+"Group" means in relation to a company (or any of the Parties), that company, any subsidiary or any holding company from time to time of that company, and any subsidiary from time to time of a holding company of that company. Each company in a Group is a member of the Group;
+
+"Permitted Purpose" means considering, evaluating, negotiating or advancing the Agreement;
+
+"Permitted Recipient" means each and any of the following Persons:
+
+(a) the Recipient’s Representatives that need to know or require access to the Confidential Information for the Permitted Purpose, or to provide advice in connection with the Agreement;
+
+(b) any Person whom a Party agrees in writ¬ing may receive Confidential Information.
+
+"Representatives" means in relation to a Party, the employees, officers, representatives and advisers of that Party or any member of its Group. On behalf of the Discloser, the Discloser's Representatives also includes other companies entailed in the Discloser's Group.
+
+1.2 References to clauses are to the clauses of this NDA.
+
+1.3 A Person includes a natural person, corporate or unincorporated body (whether or not having separate legal personality) and that person's successors and permitted assigns.
+
+1.4 A reference to writing or written includes e-mail.
+
+1.5 Any words following the terms including, include, in particular, for example or any similar expression shall be construed as illustrative and shall not limit the sense of the words, description, definition, phrase or term preceding those terms.
+
+1.6 Any obligation on a Party not to do something includes an obligation not to allow that thing to be done.
+
+2. CONFIDENTIALITY UNDERTAKINGS
+
+2.1 The Parties undertake to each other that it shall:
+
+2.1.1 keep the Confidential Information secret and confidential and shall take steps to preserve its confidentiality;
+
+2.1.2 not disclose or make available any Confidential Information to any Person, except as permitted by this NDA; and
+
+2.1.3 not use or exploit the Confidential Information in any way, except for the Permitted Purpose.
+
+2.2 The Recipient further undertakes that it shall at all times comply with the Discloser's general terms and conditions in force at the relevant time, as such terms and conditions are amended from time to time.
+
+2.3 Each Party undertake to each other that it shall only make such Copies as are strictly necessary for the Permitted Purpose and shall:
+
+2.3.1 clearly mark all Copies as confidential;
+
+2.3.2 ensure that all Copies can be separately identified from its own information; and
+
+2.3.3 ensure that all Copies within its control are protected against theft or unauthorised access.
+
+2.4 Upon request from either Party, the other Party shall promptly:
+
+2.4.1 destroy or return to the requesting Party all documents and materials containing, reflecting, incorporating, or based on any Confidential Information;
+
+2.4.2 erase all Confidential Information from the computer and communications systems and devices used by it, including any systems and data storage services provided by third parties (to the extent technically practicable); and
+
+2.4.3 certify in writing to the requesting Party that it has complied with its obligations under this clause.
+
+2.5 Each Party shall immediately notify each other if any Party becomes aware of any suspected or actual unauthorised use, copying or disclosure of the Confidential Information by any Person and comply with any reasonable and relevant direction of the exposed Party regarding any suspected or actual breach of this NDA.
+
+2.5.1 Each Party undertake to each other that it will provide reasonable assistance to the exposed Party as requested by the exposed Party in order to prevent any suspected or actual unauthorised use, copying or disclosure of the Confidential Information.
+
+2.6 The undertakings and obligations in this NDA do not apply to any Confidential Information:
+
+2.6.1 that is, or becomes, generally available to the public other than as a direct or indirect result of the information being disclosed in breach of this NDA; or
+
+2.6.2 if a Party can prove that the relevant information was available to the said Party on a non-confidential basis before it was disclosed by the other Party or its Representatives: or
+
+2.6.3 the Parties agrees in writing is not Confidential Information or may be disclosed (subject to any limitations or other terms specified by in the specific agreement regarding the method or recipient or such disclosure).
+
+3. PERMITTED USE AND FORCED DISCLOSURE
+
+3.1 The Parties may disclose Confidential Information to a Permitted Recipient, pro-vided that it:
+
+3.1.1 informs the Permitted Recipient of the confidential nature of such information before it is disclosed;
+
+3.1.2 procures that the Permitted Recipient shall, in relation to any Confidential Information disclosed to it, comply with this NDA as if it were a Party to the agreement, and if the other Party so requests, procure that the Permitted Recipient enters into a confidentiality agreement with the other Party on terms equivalent to those contained in this NDA.
+
+3.2 Each Party shall be liable for the actions or omissions of the said Party's Permitted Recipients in relation to any Confidential Information as if they were the actions or omissions of the Party itself.
+
+3.3 Each Party may disclose Confidential Information to the extent it is required to be disclosed by law, or by any regulatory or governmental authority of competent jurisdiction, or by a court of competent jurisdiction provided that, to the extent it is legally permitted to do so, the disclosing Party gives the other Party as much notice of such disclosure as possible, and takes into account the requests of the other Party in relation to the content of the disclosure.
+
+4. RESERVATION OF RIGHTS AND THE PARTIES’ ACKNOWLED-GEMENT
+
+4.1 The Parties acknowledge and agree that:
+
+4.1.1 neither the entry into this NDA nor the supply of Confidential Information shall constitute an offer or other commitment by either Party to enter into the Agreement, or any further agreement with the other Party;
+
+4.1.2 the Confidential Information may not be accurate or complete and no warranty or representation (whether express or implied) is made by any Person concerning the Confidential Information or its accuracy or completeness; and
+
+4.1.3 all rights in the Confidential Information are reserved and none of the Confidential Information shall be the property of the receiving Party.
+
+5. MISCELLANEOUS
+
+5.1 Injunctive Relief
+
+5.1.1 The Parties each undertakes to each other that if a Party would be irreparably injured by a breach of this NDA committed by any of the Parties or any of its Representatives (including Permitted Recipients), and that monetary remedies would be inadequate to protect exposed Party against any actual or threatened breach of this NDA and, without prejudice to any other rights and remedies otherwise available to the exposed Party, the Party in breach agrees to the granting of an injunctive relief (in Danish: “umiddelbart fogedforbud”) in favour of the exposed Party without proof of actual damages and without any need to secure or post any bond (in Danish: “sikkerhedsstillelse”) in connection therewith.
+
+5.2 Penalties
+
+5.2.1 In case of a breach of the confidentiality obligation of this NDA, then without prejudice to any other rights and remedies otherwise available to the Discloser, the Party in breach shall pay to the exposed Party a penalty of DKK 50.000for each breach. For the avoidance of doubt, any payment of a penalty shall not be considered as bringing the breach to an end.
+
+5.3 Indemnification
+
+5.3.1 In addition to the above mentioned penalty, the Parties shall keep each other fully and effectively indemnified against any and all losses, expenses, and damages suffered by either Party arising from any unauthorised disclosure or use of any part of the Confidential Information furnished to each Parties' Representatives (including Permitted Recipients), including, but not limited to, reasonable attorney’s fees and costs.
+
+5.4 Title
+
+5.4.1 Each Party acknowledges that the Confidential Information is the sole and exclusive property of the disclosing Party and/or any member of its Group and that the receiving Party shall have no rights, title to or interest in the Confidential Information. Nothing in this NDA shall be deemed to grant the receiving Party a license under or to any of the disclosing Party's intellectual property rights.
+
+6. DURATION
+
+6.1 This NDA shall terminate number of years years from the date of this NDA. The Parties' obligations under this NDA shall not be affected by any termination of the negotiations or discussions between the Parties in relation to the Agreement.
+
+7. ASSIGNMENT
+
+7.1 Each Party confirms that it is acting on its own behalf and not as broker or agent, or otherwise for the benefit, of any other Person.
+
+7.2 This NDA is personal to the Parties and cannot be assigned, transferred or dealt in any other manner with any or all of its rights and obligations under this NDA.
+
+8. ENTIRE AGREEMENT
+
+8.1 This NDA constitutes the entire agreement between the Parties on confidentiality and non-disclosure and supersedes and extinguishes all previous discussions, correspondence, negotiations, drafts, agreements, promises, assurances, warranties, representations and understandings between them, whether written or oral, relating to its subject matter.
+
+8.2 Each Party acknowledges that in entering into this NDA it does not rely on, and shall have no remedies in respect of, any statement, representation, assurance or warranty (whether made innocently or negligently) that is not set out in this NDA. Each Party agrees that it shall have no claim for innocent or negligent misrepresentation based on any statement in this NDA.
+
+9. SEVERABILITY
+
+9.1 The provisions of this NDA are independent and severable from each other. If at any time any provision of this NDA is or becomes illegal or unenforceable in any respect under the law of any jurisdiction, this does not affect or impair:
+
+9.1.1 the legality, validity, or enforceability in that jurisdiction of any other pro-vision of this NDA; nor
+
+9.1.2 the legality, validity, or enforceability under the law of any other jurisdic-tion of that or any other provision of this NDA.
+
+9.2 If one or more of the provisions of this NDA are held to be illegal or unenforceable, or in any other way contrary to the law of any jurisdiction, the Parties agree to use their best endeavours to negotiate a legally valid replacement to the offending provision(s). In case the Parties cannot agree on such negotiation, the offending provision(s) must be amended in such way as may be necessary in accordance with the law of Denmark.
+
+10. AMENDMENTS AND WAIVERS
+
+10.1 This NDA may be amended and the terms hereof may be waived only by written instrument signed by the Parties (or their authorised representatives).
+
+10.2 No failure or delay by either Party to exercise any right or remedy provided under this NDA or by law shall constitute a waiver of that or any other right or remedy, nor shall it prevent or restrict the further exercise of that or any other right or remedy. No single or partial exercise of such right or remedy shall prevent or restrict the further exercise of that or any other right or remedy.
+
+11. COSTS
+
+11.1 Each Party shall pay its own costs and expenses incurred in connection with the Agreement, including the negotiation, preparation and execution of this NDA and the evaluation and review of Confidential Information.
+
+12. GOVERNING LAW AND JURISDICTION
+
+12.1 This NDA shall be governed by and construed in accordance with the laws of Denmark.
+
+12.2 Any and all disputes and claims arising out of or in connection with this NDA shall be finally settled by arbitration in accordance with the Rules of Procedure of the Danish Institute of Arbitration (Copenhagen Arbitration). The arbitration tribunal shall be composed of one arbitrator appointed by the Institute of Arbitration. The place of arbitration shall be Copenhagen and the language of the arbitration proceedings shall be English.
+
+12.3 For the avoidance of doubt this Clause 12, shall not restrict either Party from seeking injunctive relief or any other remedy with a competent court.
+
+The parties have executed this NDA on the date stated in the beginning of this NDA.

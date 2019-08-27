@@ -32,3 +32,17 @@ class Contract(db.Model):
     owner_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     # template tags
     # relation versions
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'version': self.version,
+            'name': self.name,
+            'description': self.description,
+            'effective_date': self.effective_date,
+            'expiration_date': self.expiration_date,
+            'currency': self.currency,
+            'status': self.status,
+            'owner_id': self.owner_id
+        }
+# 'legal_text': self.legal_text,

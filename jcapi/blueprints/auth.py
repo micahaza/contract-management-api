@@ -2,7 +2,8 @@ from flask import Blueprint, request, jsonify
 from jcapi import bcrypt
 from jcapi.models import User
 from marshmallow import Schema, validate, fields
-from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
+from flask_jwt_extended import create_access_token
+
 
 auth = Blueprint('auth', __name__)
 
@@ -23,13 +24,6 @@ def user_login():
         return jsonify(access_token=access_token), 200
     else:
         return jsonify({'error': 'wrong password'}), 500
-
-
-@auth.route('/logout/', methods=['GET'])
-@jwt_required
-def user_logout():
-    current_user = get_jwt_identity()
-    return jsonify(logged_in_as=current_user), 200
 
 
 class LoginSchema(Schema):
