@@ -24,3 +24,20 @@ def test_can_create_contract(test_client, header_with_token, contract_text):
     assert contract.status == contract_data['status']
     assert contract.name == contract_data['name']
     assert contract.description == contract_data['description']
+
+
+def test_get_contract(test_client, header_with_token, contract):
+    response = test_client.get('/api/v1/contract/' + str(contract.id), headers=header_with_token)
+    response_data = json.loads(response.data)
+    assert response.status_code == 200
+    assert response_data['description'] == contract.description
+    assert response_data['status'] == contract.status
+    assert response_data['currency'] == contract.currency
+    assert response_data['legal_text'] == contract.legal_text
+
+
+def test_get_non_existent_contract(test_client, header_with_token):
+    response = test_client.get('/api/v1/contract/92837423', headers=header_with_token)
+    response_data = json.loads(response.data)
+    assert response.status_code == 404
+    assert response_data['msg'] == 'Contract not found'

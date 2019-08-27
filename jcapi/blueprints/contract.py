@@ -30,6 +30,15 @@ def create_contract():
     return jsonify(contract.to_dict()), 200
 
 
+@jwt_required
+@contract.route('/<id>', methods=['GET', 'POST'])
+def get_contract(id):
+    contract = Contract.query.get(int(id))
+    if contract is None:
+        return jsonify({'msg': 'Contract not found'}), 404
+    return jsonify(contract.to_dict())
+
+
 class CreateContractSchema(Schema):
     name = fields.String(validate=validate.Length(min=3, max=128), required=True)
     description = fields.String()

@@ -1,6 +1,6 @@
 import pytest
 from jcapi import create_app, db
-from jcapi.models import User
+from jcapi.models import User, Contract
 from flask_jwt_extended import create_access_token
 
 
@@ -45,3 +45,19 @@ def contract_text():
     with open('./tests/nda-contract.txt') as file:
         data = file.readlines()
     return data[0]
+
+
+@pytest.fixture(scope='module')
+def contract(contract_text, user):
+    contract = Contract()
+    contract.name = 'Non Disclosure Agreement'
+    contract.description = 'trust each other, just for fun'
+    contract.legal_text = contract_text
+    contract.effective_date = '2019-09-01'
+    contract.expiration_date = '2019-12-01'
+    contract.currency = 'EUR'
+    contract.status = 'DRAFT'
+    contract.owner_id = user.id
+    db.session.add(contract)
+    db.session.commit()
+    yield contract
