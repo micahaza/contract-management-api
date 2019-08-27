@@ -17,13 +17,20 @@ class User(db.Model):
     password_hash = db.Column(db.String(128))
     contracts = db.relationship("Contract",
                                 secondary=contract_party,
-                                lazy='subquery',
+                                lazy=True,
                                 back_populates="parties")
 
     def __init__(self, username, email, password):
         self.username = username
         self.email = email
         self.password_hash = bcrypt.generate_password_hash(password).decode('utf-8')
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'username': self.username,
+            'email': self.email
+        }
 
 
 class Contract(db.Model):
@@ -42,7 +49,7 @@ class Contract(db.Model):
     owner_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     parties = db.relationship("User",
                               secondary=contract_party,
-                              lazy='subquery',
+                              lazy=True,
                               back_populates="contracts")
 
     # template tags
@@ -59,5 +66,6 @@ class Contract(db.Model):
             'expiration_date': self.expiration_date,
             'currency': self.currency,
             'status': self.status,
-            'owner_id': self.owner_id
+            'owner_id': self.owner_id,
+            'parties': [u.to_dict() for u in self.parties]
         }

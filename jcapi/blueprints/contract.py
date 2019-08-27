@@ -31,8 +31,48 @@ def create_contract():
 
 
 @jwt_required
-@contract.route('/<id>', methods=['GET', 'POST'])
+@contract.route('/<id>', methods=['GET'])
 def get_contract(id):
+    contract = Contract.query.get(int(id))
+    if contract is None:
+        return jsonify({'msg': 'Contract not found'}), 404
+    return jsonify(contract.to_dict())
+
+
+@jwt_required
+@contract.route('/<id>', methods=['POST'])
+def update_contract(id):
+    # TODO finish it properly
+    contract = Contract.query.get(int(id))
+    if contract is None:
+        return jsonify({'msg': 'Contract not found'}), 404
+    return jsonify(contract.to_dict())
+
+
+@jwt_required
+@contract.route('/<id>/versions', methods=['GET'])
+def get_contract_versions(id):
+    # TODO finish it properly
+    contract = Contract.query.get(int(id))
+    if contract is None:
+        return jsonify({'msg': 'Contract not found'}), 404
+    return jsonify(contract.to_dict())
+
+
+@jwt_required
+@contract.route('/<id>/parties', methods=['GET'])
+def get_contract_parties(id):
+    # TODO finish it properly
+    contract = Contract.query.get(int(id))
+    if contract is None:
+        return jsonify({'msg': 'Contract not found'}), 404
+    return jsonify(contract.to_dict())
+
+
+@jwt_required
+@contract.route('/<id>/template_tags', methods=['GET'])
+def get_template_tags(id):
+    # TODO finish it properly
     contract = Contract.query.get(int(id))
     if contract is None:
         return jsonify({'msg': 'Contract not found'}), 404

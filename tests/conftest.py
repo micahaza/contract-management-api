@@ -58,6 +58,10 @@ def contract(contract_text, user):
     contract.currency = 'EUR'
     contract.status = 'DRAFT'
     contract.owner_id = user.id
+    party1 = User('deezent1', 'deezent1@gmail.com', 'deezentpass1')
+    party2 = User('deezent2', 'deezent2@gmail.com', 'deezentpass2')
+    party3 = User('deezent3', 'deezent3@gmail.com', 'deezentpass3')
+    contract.parties.extend([party1, party2, party3])
     db.session.add(contract)
     db.session.commit()
     yield contract
