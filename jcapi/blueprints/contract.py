@@ -16,6 +16,7 @@ def create_contract():
     if errors:
         return jsonify({}), 400
     contract = Contract()
+    contract.version = 1
     contract.name = rv['name']
     contract.description = rv['description']
     contract.legal_text = rv['legal_text']

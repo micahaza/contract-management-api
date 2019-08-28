@@ -1,6 +1,6 @@
 import pytest
 from jcapi import create_app, db
-from jcapi.models import User, Contract
+from jcapi.models import User, Contract, TemplateTag
 from flask_jwt_extended import create_access_token
 
 
@@ -50,6 +50,7 @@ def contract_text():
 @pytest.fixture(scope='module')
 def contract(contract_text, user):
     contract = Contract()
+    contract.version = 1
     contract.name = 'Non Disclosure Agreement'
     contract.description = 'trust each other, just for fun'
     contract.legal_text = contract_text
@@ -58,10 +59,19 @@ def contract(contract_text, user):
     contract.currency = 'EUR'
     contract.status = 'DRAFT'
     contract.owner_id = user.id
+
     party1 = User('deezent1', 'deezent1@gmail.com', 'deezentpass1')
     party2 = User('deezent2', 'deezent2@gmail.com', 'deezentpass2')
     party3 = User('deezent3', 'deezent3@gmail.com', 'deezentpass3')
     contract.parties.extend([party1, party2, party3])
+
+    tt1 = TemplateTag('key1', 'value1')
+    tt2 = TemplateTag('key3', 'value3')
+    tt3 = TemplateTag('key1', 'value3')
+    contract.template_tags.append(tt1)
+    contract.template_tags.append(tt2)
+    contract.template_tags.append(tt3)
+
     db.session.add(contract)
     db.session.commit()
     yield contract

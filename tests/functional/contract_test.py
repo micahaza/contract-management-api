@@ -35,6 +35,7 @@ def test_get_contract(test_client, header_with_token, contract):
     assert response_data['currency'] == contract.currency
     assert response_data['legal_text'] == contract.legal_text
     assert len(response_data['parties']) == 3
+    assert len(response_data['template_tags']) == 3
 
 
 def test_get_non_existent_contract(test_client, header_with_token):

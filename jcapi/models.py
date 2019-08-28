@@ -33,6 +33,28 @@ class User(db.Model):
         }
 
 
+class TemplateTag(db.Model):
+
+    __tablename__ = 'template_tags'
+
+    id = db.Column(db.Integer, primary_key=True)
+    contract_id = db.Column(db.Integer, db.ForeignKey('contracts.id'), nullable=False)
+    name = db.Column(db.String(255), nullable=False)
+    value = db.Column(db.String(255), nullable=False)
+
+    def __init__(self, name, value):
+        self.name = name
+        self.value = value
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'contract_id': self.contract_id,
+            'name': self.name,
+            'value': self.value
+        }
+
+
 class Contract(db.Model):
 
     __tablename__ = 'contracts'
@@ -51,8 +73,7 @@ class Contract(db.Model):
                               secondary=contract_party,
                               lazy=True,
                               back_populates="contracts")
-
-    # template tags
+    template_tags = db.relationship("TemplateTag", uselist=True, backref='contract', lazy=True)
     # relation versions
 
     def to_dict(self):
@@ -67,5 +88,6 @@ class Contract(db.Model):
             'currency': self.currency,
             'status': self.status,
             'owner_id': self.owner_id,
-            'parties': [u.to_dict() for u in self.parties]
+            'parties': [u.to_dict() for u in self.parties],
+            'template_tags': [tt.to_dict() for tt in self.template_tags]
         }
