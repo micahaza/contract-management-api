@@ -3,11 +3,13 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
+from jcapi.utils.mail import MailSender
 
 db = SQLAlchemy()
 migrate = Migrate()
 bcrypt = Bcrypt()
 jwt = JWTManager()
+mail = MailSender()
 
 
 def create_app(config_filename=None):
@@ -23,6 +25,7 @@ def initialize_extensions(app):
     migrate.init_app(app, db)
     bcrypt.init_app(app)
     jwt.init_app(app)
+    mail.init_app(app)
 
 
 def register_blueprints(app):
