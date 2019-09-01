@@ -18,7 +18,11 @@ def user_login():
     password = req_data['password']
     user = User.query.filter_by(username=username).first()
     if user is None:
-        return jsonify(dict(error='User not exists')), 404
+        return jsonify(dict(error='User not exists')), 403
+    elif user.active is False:
+        return jsonify(dict(error='User is not active')), 403
+    elif user.email_verified is False:
+        return jsonify(dict(error='User email is not verified')), 403
     elif bcrypt.check_password_hash(user.password_hash, password):
         access_token = create_access_token(identity=username)
         return jsonify(access_token=access_token), 200

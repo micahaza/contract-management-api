@@ -32,6 +32,16 @@ def user(app):
 
 
 @pytest.fixture(scope='module')
+def valid_user(app):
+    user = User('deezent_valid', 'deezent_valid@gmail.com', 'deezentpass')
+    user.active = True
+    user.email_verified = True
+    db.session.add(user)
+    db.session.commit()
+    yield user
+
+
+@pytest.fixture(scope='module')
 def header_with_token(user):
     access_token = create_access_token(user.username)
     headers = {
