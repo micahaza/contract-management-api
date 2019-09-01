@@ -20,7 +20,6 @@ class MailSender(object):
 
     def send_message(self, msg):
         server = smtplib.SMTP_SSL(self.app.config['MAIL_SERVER'], self.app.config['MAIL_PORT'])
-        server.ehlo()
         server.login(self.app.config['MAIL_USERNAME'], self.app.config['MAIL_PASSWORD'])
         result = server.sendmail(msg["From"], msg["To"], msg.as_string())
         server.quit()
