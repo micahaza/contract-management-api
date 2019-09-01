@@ -1,4 +1,4 @@
-from jcapi.utils.mail import MailSender
+from jcapi.extensions.mail import MailSender
 from unittest import mock
 
 

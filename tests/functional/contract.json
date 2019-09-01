@@ -1,0 +1,42 @@
+{
+    "currency": "EUR",
+    "description": "trust each other, just for fun",
+    "effective_date": "Sun, 01 Sep 2019 00:00:00 GMT",
+    "expiration_date": "Sun, 01 Dec 2019 00:00:00 GMT",
+    "id": 2,
+    "legal_text": "Discloser and the Recipient are each referred to as a \\u201cParty\\u201d and collectively as \\u201cParties\\u201d.\\n",
+    "name": "Non Disclosure Agreement",
+    "owner_id": 1,
+    "parties": [{
+        "email": "deezent1@gmail.com",
+        "id": 2,
+        "username": "deezent1"
+    }, {
+        "email": "deezent2@gmail.com",
+        "id": 3,
+        "username": "deezent2"
+    }, {
+
+        "email": "deezent3@gmail.com",
+        "id": 4,
+        "username": "deezent3"
+    }],
+    "status": "DRAFT",
+    "template_tags": [{
+        "contract_id": 2,
+        "id": 1,
+        "name": "key1",
+        "value": "value1"
+    }, {
+        "contract_id": 2,
+        "id": 2,
+        "name": "key3",
+        "value": "value3"
+    }, {
+        "contract_id": 2,
+        "id": 3,
+        "name": "key1",
+        "value": "value3"
+    }],
+    "version": 1
+}

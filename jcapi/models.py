@@ -15,6 +15,8 @@ class User(db.Model):
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
+    active = db.Column(db.Boolean, nullable=False, default=False)
+    email_verified = db.Column(db.Boolean, nullable=False, default=False)
     contracts = db.relationship("Contract",
                                 secondary=contract_party,
                                 lazy=True,
@@ -42,7 +44,7 @@ class TemplateTag(db.Model):
     name = db.Column(db.String(255), nullable=False)
     value = db.Column(db.String(255), nullable=False)
 
-    def __init__(self, name, value):
+    def __init__(self, name: str, value: str):
         self.name = name
         self.value = value
 

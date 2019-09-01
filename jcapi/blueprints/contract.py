@@ -42,7 +42,7 @@ def get_contract(id):
 
 @jwt_required
 @contract.route('/<id>', methods=['POST'])
-def update_contract(id):
+def update_contract(id: int):
     # TODO finish it properly
     contract = Contract.query.get(int(id))
     if contract is None:
@@ -52,7 +52,7 @@ def update_contract(id):
 
 @jwt_required
 @contract.route('/<id>/versions', methods=['GET'])
-def get_contract_versions(id):
+def get_contract_versions(id: int):
     # TODO finish it properly
     contract = Contract.query.get(int(id))
     if contract is None:
@@ -62,7 +62,7 @@ def get_contract_versions(id):
 
 @jwt_required
 @contract.route('/<id>/parties', methods=['GET'])
-def get_contract_parties(id):
+def get_contract_parties(id: int):
     # TODO finish it properly
     contract = Contract.query.get(int(id))
     if contract is None:
@@ -72,7 +72,7 @@ def get_contract_parties(id):
 
 @jwt_required
 @contract.route('/<id>/template_tags', methods=['GET'])
-def get_template_tags(id):
+def get_template_tags(id: int):
     # TODO finish it properly
     contract = Contract.query.get(int(id))
     if contract is None:
