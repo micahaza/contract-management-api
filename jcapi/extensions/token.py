@@ -20,16 +20,16 @@ class TokenManager(object):
                 digest_method=hashlib.sha256)
         )
 
-    def get_email_validation_token(self, user_json):
+    def get_token(self, user_json):
         return self.serializer.dumps(user_json)
 
     def confirm_token(self, token, expiration=3600):
         try:
-            user_json = self.serializer.loads(
+            data = self.serializer.loads(
                 token,
                 salt=self.security_password_salt,
                 max_age=expiration
             )
         except BadSignature:
             return False
-        return user_json
+        return data

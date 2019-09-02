@@ -15,6 +15,11 @@ def app():
 
 
 @pytest.fixture(scope='module')
+def testdb(app):
+    yield db
+
+
+@pytest.fixture(scope='module')
 def test_client(app):
     testing_client = app.test_client()
     ctx = app.app_context()

@@ -21,7 +21,7 @@ def register():
         u = User(username, email, password)
         db.session.add(u)
         db.session.commit()
-        token = token_manager.get_email_validation_token({'user_id': u.id, 'email': u.email})
+        token = token_manager.get_token({'user_id': u.id, 'email': u.email})
     else:
         return jsonify(dict(error='User already registered')), 409
     return jsonify({'token': token}), 200

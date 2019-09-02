@@ -3,7 +3,7 @@ from jcapi.extensions.token import TokenManager
 
 def test_token_generation(app, user):
     tm = TokenManager(app)
-    token = tm.get_email_validation_token({'user_id': user.id, 'email': user.email})
+    token = tm.get_token({'user_id': user.id, 'email': user.email})
     assert token is not None
     assert type(token) is str
 
