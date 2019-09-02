@@ -36,6 +36,7 @@ MAIL_SERVER='your server address'
 MAIL_PORT=465
 MAIL_USERNAME='login@blockspire.com'
 MAIL_PASSWORD='my pass'
+MAIL_DEFAULT_SENDER='deezent@blockspire.com'
 MAIL_ENABLED=True
 ```
 

@@ -8,7 +8,6 @@ def test_can_get_password_reset_token_and_change_password(test_client, valid_use
     data = json.loads(response.data)
     assert 'token' in data
     assert response.status_code == 200
-    print(valid_user.password_hash)
 
     # setting new password
     payload = {'token': data['token'], 'new_password': 'password_has_been_changed'}

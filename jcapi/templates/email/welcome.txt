@@ -1,0 +1,17 @@
+Hi {{name}},
+
+Subject:  Welcome To JustContracts.io
+
+Thank you for signing up to JustContracts.io.
+
+Please click {{email_verification_link}} to verify your email address and fully enable your account. 
+ 
+We created JustContracts to enable you to quickly and easily create and manage contracts and store them on blockchain. 
+
+We’re a startup and we’re all ears to hear your feedback on how we can improve our offering.  So do send us some feedback. 
+ 
+Enjoy using JustContracts.io. 
+ 
+Best Regards,
+
+The JustContracts.io Team

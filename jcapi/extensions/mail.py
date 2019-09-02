@@ -1,7 +1,7 @@
 import smtplib
 from email.mime.text import MIMEText
 from threading import Thread
-from flask import Flask
+from flask import Flask, render_template
 
 
 class MailSender(object):
@@ -11,24 +11,30 @@ class MailSender(object):
             self.init_app(app)
 
     def init_app(self, app: Flask = None):
-        self.server = app.config['MAIL_SERVER']
+        self.server_name = app.config['MAIL_SERVER']
         self.port = app.config['MAIL_PORT']
         self.username = app.config['MAIL_USERNAME']
         self.password = app.config['MAIL_PASSWORD']
         self.mail_enabled = app.config['MAIL_ENABLED']
+        self.default_sender = app.config['MAIL_DEFAULT_SENDER']
 
-    def build_message(self, sender: str, recipient: str, subject: str, body: str):
+    def build_message(self, recipient: str, subject: str, body: str, sender=None):
         msg = MIMEText(body)
         msg['Subject'] = subject
-        msg['From'] = sender
+        msg['From'] = sender or self.default_sender
         msg['To'] = recipient
         return msg
 
-    def send_template(self, template: str):
-        pass
+    def build_message_from_template(self, recipient: str, subject: str, template: str, sender=None, **kwargs):
+        body = render_template('email/' + template + '.txt', **kwargs)
+        msg = MIMEText(body)
+        msg['Subject'] = subject
+        msg['From'] = sender or self.default_sender
+        msg['To'] = recipient
+        return msg
 
     def send_message(self, msg: MIMEText):
-        server = smtplib.SMTP_SSL(self.server, self.port)
+        server = smtplib.SMTP_SSL(self.server_name, self.port)
         server.login(self.username, self.password)
         result = server.sendmail(msg["From"], msg["To"], msg.as_string())
         server.quit()
