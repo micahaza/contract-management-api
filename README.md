@@ -31,6 +31,12 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 SECRET_KEY = '2s-ymN5--KIp7goh-CVRrliS9aMTrYuVmWy3-CYnXjJcq3AZXHLBOf8I26aw_5AHUf7'
 JWT_SECRET_KEY = '1ZNA-ax-6NW-J8VR7hsRxNvfvoMm5mahcYTO6RGra-nVv8AArsWlc10xcLN4Ha1I-XdcoYpL'
 JWT_ACCESS_TOKEN_EXPIRES = 1800
+
+MAIL_SERVER='your server address'
+MAIL_PORT=465
+MAIL_USERNAME='login@blockspire.com'
+MAIL_PASSWORD='my pass'
+MAIL_ENABLED=True
 ```
 
 I'm generating these secret keys like this:

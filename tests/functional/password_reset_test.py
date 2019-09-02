@@ -1,7 +1,7 @@
 import json
 
 
-def test_can_get_password_reset_token(test_client, valid_user):
+def test_can_get_password_reset_token_and_change_password(test_client, valid_user):
     # requesting the password reset token
     payload = {'email': valid_user.email}
     response = test_client.post('/api/v1/auth/password-reset-request/', json=payload)
