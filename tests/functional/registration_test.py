@@ -1,24 +1,29 @@
 from jcapi.models import User
 import pytest
 import json
+from unittest import mock
 
 wrong_registration_data = [
-    (dict(username='as', email='asdf@asdf.hu', password='asdfasdf'), 400),
-    (dict(username='asdf', email='', password='asdfasdf'), 400),
-    (dict(username='aasdasds', email='asdf@asdf.hu', password=''), 400),
-    (dict(username='', email='', password=''), 400),
-    (dict(username='äđ¶', email='hola at booo dot com', password=''), 400)
+    (dict(username='as', email='bajgli+1@gmail.com', password='asdfasdf', first_name=''), 400),
+    (dict(username='asdf', email='', password='asdfasdf', first_name='joe', last_name='Booo'), 400),
+    (dict(username='aasdasds', email='bajgli+2@gmail.com', password='', first_name='joe', last_name='Booo'), 400),
+    (dict(username='', email='', password='', first_name='joe', last_name='Booo'), 400),
+    (dict(username='äđ¶', email='hola at booo dot com', password='', first_name='joe', last_name='Booo'), 400)
 ]
 
 correct_registration_data = [
-    (dict(username='asasdf', email='booge@gmail.com', password='supersecret'), 200),
-    (dict(username='goodusername', email='gooduser@gmail.com', password='asdfasdflong'), 200),
-    (dict(username='badaboooo', email='badaboooo@flask.com', password='goodenough'), 200)
+    (dict(username='asasdf', email='bajgli+3@gmail.com', password='supersecret', first_name='Super', last_name='Man'), 200),
+    (dict(username='goodusername', email='bajgli+4@gmail.com', password='asdfasdflong', first_name='Super', last_name='Man'), 200),
+    (dict(username='badaboooo', email='bajgli+5@gmail.com', password='goodenough', first_name='Super', last_name='Man'), 200)
 ]
 
 
 @pytest.mark.parametrize("test_input, expected_output", correct_registration_data)
-def test_user_can_register(test_client, test_input, expected_output):
+@mock.patch('smtplib.SMTP_SSL', autospec=True)
+def test_user_can_register(mail_sender_mock, test_client, test_input, expected_output):
+    mail_sender_mock.return_value.login = mock.Mock(return_value={})
+    mail_sender_mock.return_value.sendmail = mock.Mock(return_value={})
+
     response = test_client.post('/api/v1/registration/', json=test_input)
     assert response.status_code == expected_output
     assert 'token' in json.loads(response.data)
@@ -34,7 +39,7 @@ def test_missing_data(test_client, test_input, expected_output):
 
 
 def test_user_can_not_register_twice(test_client):
-    reg_data = dict(username='goodusername2', email='gooduser2@gmail.com', password='asdfasdflong2')
+    reg_data = dict(username='goodusername2', email='gooduser2@gmail.com', password='asdfasdflong2', first_name='Super', last_name='Man')
     response = test_client.post('/api/v1/registration/', json=reg_data)
     assert response.status_code == 200
     response = test_client.post('/api/v1/registration/', json=reg_data)
@@ -42,7 +47,7 @@ def test_user_can_not_register_twice(test_client):
 
 
 def test_email_validation(test_client):
-    reg_data = dict(username='tqtqtq', email='tqtqtq@gmail.com', password='tqtqtqtqtqtq')
+    reg_data = dict(username='tqtqtq', email='tqtqtq@gmail.com', password='tqtqtqtqtqtq', first_name='Super', last_name='Man')
     response = test_client.post('/api/v1/registration/', json=reg_data)
     assert response.status_code == 200
     email_validation_token = json.loads(response.data)

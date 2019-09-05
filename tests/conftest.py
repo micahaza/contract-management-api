@@ -30,7 +30,7 @@ def test_client(app):
 
 @pytest.fixture(scope='module')
 def user(app):
-    user = User('deezent', 'deezent@gmail.com', 'deezentpass')
+    user = User('deezent', 'deezent@gmail.com', 'deezentpass', 'Deezent', 'Ralized')
     db.session.add(user)
     db.session.commit()
     yield user
@@ -38,7 +38,7 @@ def user(app):
 
 @pytest.fixture(scope='module')
 def valid_user(app):
-    user = User('deezent_valid', 'deezent_valid@gmail.com', 'deezentpass')
+    user = User('deezent_valid', 'deezent_valid@gmail.com', 'deezentpass', 'Deezent', 'Ralized')
     user.active = True
     user.email_verified = True
     db.session.add(user)
@@ -75,9 +75,9 @@ def contract(contract_text, user):
     contract.status = 'DRAFT'
     contract.owner_id = user.id
 
-    party1 = User('deezent1', 'deezent1@gmail.com', 'deezentpass1')
-    party2 = User('deezent2', 'deezent2@gmail.com', 'deezentpass2')
-    party3 = User('deezent3', 'deezent3@gmail.com', 'deezentpass3')
+    party1 = User('deezent1', 'deezent1@gmail.com', 'deezentpass1', 'Deezent', 'Ralized')
+    party2 = User('deezent2', 'deezent2@gmail.com', 'deezentpass2', 'Deezent', 'Ralized')
+    party3 = User('deezent3', 'deezent3@gmail.com', 'deezentpass3', 'Deezent', 'Ralized')
     contract.parties.extend([party1, party2, party3])
 
     tt1 = TemplateTag('key1', 'value1')
